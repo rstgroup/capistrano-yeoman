@@ -38,7 +38,22 @@ And then execute:
 
 ```
 
-and link your app/curent/dist folder in your nginx/apache/other web serwer.
+and link your ...appdir/curent/dist folder in your nginx/apache/other web serwer.
+
+## How it works?
+
+After updating code on the server it:
+
+1. installs yeoman (if its not already installed)
+2. runs `npm install`
+3. runs `bower install`
+4. finally `$grunt build`
+
+## Dependencies
+
+Nodejs with npm have to be installed on your server. In case of using sass also ruby with compass should be in your PATH.
+
+It's good to update the npm before first deploy (`sudo npm update npm -g`), but after that be sure that your deploying user has access to ~/.npm dir and ~/tmp (if it exist).
 
 ## Tasks
 
