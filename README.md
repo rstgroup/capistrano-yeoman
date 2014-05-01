@@ -1,24 +1,51 @@
 # Capistrano::Yeoman
 
-TODO: Write a gem description
+Capistrano plugin that integrates Yeoman workflow into capistrano deployment script.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+### If you have Gemfile
 
+Add those lines to your application's Gemfile:
+
+    gem 'capistrano', '~> 3.1'
     gem 'capistrano-yeoman'
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
-Or install it yourself as:
+### If not - install it yourself as:
 
     $ gem install capistrano-yeoman
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+  # Capfile
+  require 'capistrano/yeoman'
+
+```
+
+```
+  # config/deploy.rb
+  set :linked_dirs, %w{node_modules app/bower_components}
+  namespace :deploy do
+  ...
+    after :published, "yo:build"
+  ...
+  end
+
+```
+
+and link your app/curent/dist folder in your nginx/apache/other web serwer.
+
+## Tasks
+
+- yo:install - installs yeoman locally in node_modules (only if its not already installed)
+- grunt:build
+- bower:install
+- npm:install
 
 ## Contributing
 

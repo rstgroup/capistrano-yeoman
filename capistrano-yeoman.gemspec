@@ -7,10 +7,10 @@ Gem::Specification.new do |spec|
   spec.name          = "capistrano-yeoman"
   spec.version       = Capistrano::Yeoman::VERSION
   spec.authors       = ["Wojtek Krysiak"]
-  spec.email         = ["wojciech.krysiak@kmpgroup.pl"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.email         = ["wojciech.g.krysiak@gmail.com"]
+  spec.description   = %q{yeoman integration for Capistrano}
+  spec.summary       = %q{yeoman integration for Capistrano}
+  spec.homepage      = "https://github.com/wojtek-krysiak/capistrano-yeoman"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -20,4 +20,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
+
+  spec.add_dependency 'capistrano', '~> 3.1'
+  spec.add_dependency 'sshkit', '~> 1.3'
 end

@@ -1,7 +1,2 @@
 require "capistrano/yeoman/version"
-
-module Capistrano
-  module Yeoman
-    # Your code goes here...
-  end
-end
+load File.expand_path("../tasks/yeoman.rake", __FILE__)
