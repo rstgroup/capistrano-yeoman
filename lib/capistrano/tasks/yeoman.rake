@@ -1,5 +1,10 @@
-SSHKit.config.command_map[:bower] = File.join(current_path, 'node_modules', 'bower', 'bin', "bower")
-SSHKit.config.command_map[:grunt] = File.join(current_path, 'node_modules', 'grunt-cli', 'bin', "grunt")
+namespace :config do
+  task :set_paths do
+    SSHKit.config.command_map[:bower] = File.join(release_path, 'node_modules', 'bower', 'bin', "bower")
+    SSHKit.config.command_map[:grunt] = File.join(release_path, 'node_modules', 'grunt-cli', 'bin', "grunt")
+  end
+end
+
 
 namespace :yo do 
   # task :set_path do 
@@ -20,6 +25,7 @@ namespace :yo do
   end
 
   task :build do
+    invoke 'config:set_paths'
     invoke 'yo:install'
     invoke 'npm:install'
     invoke 'bower:install'
