@@ -1,5 +1,5 @@
-# SSHKit.config.command_map[:bower] = File.join(current_path, 'node_modules', 'bower', 'bin', "bower")
-# SSHKit.config.command_map[:grunt] = File.join(current_path, 'node_modules', 'grunt-cli', 'bin', "grunt")
+SSHKit.config.command_map[:bower] = File.join(current_path, 'node_modules', 'bower', 'bin', "bower")
+SSHKit.config.command_map[:grunt] = File.join(current_path, 'node_modules', 'grunt-cli', 'bin', "grunt")
 
 namespace :yo do 
   # task :set_path do 
