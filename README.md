@@ -21,21 +21,15 @@ And then execute:
 
 ## Usage
 
+```ruby
+# Capfile
+require 'capistrano/yeoman'
 ```
-  # Capfile
-  require 'capistrano/yeoman'
 
-```
-
-```
-  # config/deploy.rb
-  set :linked_dirs, %w{node_modules app/bower_components}
-  namespace :deploy do
-  ...
-    after :published, "yo:build"
-  ...
-  end
-
+```ruby
+# config/deploy.rb
+set :linked_dirs, %w{node_modules app/bower_components}
+after "deploy:updated", "yo:build"
 ```
 
 and link your ...appdir/curent/dist folder in your nginx/apache/other web serwer.
