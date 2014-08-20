@@ -2,6 +2,8 @@
 
 Capistrano plugin that integrates Yeoman workflow into capistrano deployment script.
 
+[![RST](http://rst-it.com/files/rstwithpassion.png)](http://rst-it.com) [![RST](http://rst-it.com/files/howwedoapps.png)](http://howwedoapps.com)
+
 ## Installation
 
 ### If you have Gemfile
