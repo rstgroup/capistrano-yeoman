@@ -7,13 +7,6 @@ end
 
 
 namespace :yo do 
-  # task :set_path do 
-  #   SSHKit.config.default_env[:path] += [
-  #     "#{shared_path}/node_modules/bower/bin", 
-  #     "#{shared_path}/node_modules/grunt-cli/bin",
-  #   ]
-  # end
-
   task :install do
     on roles(:app), in: :sequence, wait: 5 do 
       within release_path do 
